@@ -26,7 +26,7 @@ body{
 
 .container{
     width: 80%;
-    max-width: 1920px;
+    max-width: 1800px;
     margin: 0px auto;
 }
 
@@ -69,22 +69,38 @@ body{
 
 .items{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     margin: 0px -30px;
 }
 
 .item{
-    flex-basis: 240px;
+    flex-basis: 300px;
     margin: 30px;
-
+    flex-grow: .34;
 }
+
 
 .item__text{
     padding: 10px;
     text-align: justify;
 }
 
+.item__title{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.item__photo{
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
 .text{
     text-align: justify;
+}
+
+
+.a-enter-vr-button{
+    display: none;
 }
