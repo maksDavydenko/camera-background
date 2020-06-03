@@ -4,6 +4,6 @@ const menuList = document.querySelector('.header__nav');
 
 menuBtn.addEventListener('click', () => {
     menuLine.classList.toggle('active');
-    menuList.style.height = menuList.style.height === '190px' ?
-        '0' : '190px';
+    menuList.style.height = menuList.style.height === '180px' ?
+        '0' : '180px';
 });
