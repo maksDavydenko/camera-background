@@ -27,13 +27,19 @@ body{
 .container{
     width: 80%;
     max-width: 1800px;
-    margin: 0px auto;
+    margin: 0 auto;
 }
 
 .header{
     padding: 30px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin-bottom: 50px;
 }
@@ -44,25 +50,45 @@ body{
 }
 
 header{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
 .header__mobile{
     width: 100%;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
 .header__nav{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 
 .header__nav-list{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -71,11 +97,15 @@ header{
 }
 
 .header__nav-link{
-    transition: .3 ease;
+    -webkit-transition: .3s ease;
+    -o-transition: .3s ease;
+    transition: .3s ease;
 }
 .header__nav-link:hover{
     color: orange;
-    transition: .3 ease;
+    -webkit-transition: .3s ease;
+    -o-transition: .3s ease;
+    transition: .3s ease;
 }
 
 
@@ -102,6 +132,8 @@ header{
     background-color: #fff;
     height: 2px;
     width: 20px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
     transition: .3s;
 }
 
@@ -112,6 +144,8 @@ header{
     background-color: #fff;
     height: 2px;
     width: 20px;
+    -webkit-transition: .7s;
+    -o-transition: .7s;
     transition: .7s;
 }
 
@@ -121,11 +155,15 @@ header{
 
 .active::after{
     top: 0;
+    -webkit-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
     transform: rotate(225deg);
 }
 
 .active::before{
     top: 0;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
 
 }
@@ -137,16 +175,38 @@ header{
 /* content */
 
 #bgBtn{
-    padding: 10px 30px;
+    position: fixed;
+    left: 10px;
+    top: 70px;
+    padding: 10px 5px;
     border: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: 0px auto;
     color: #000;
     border-radius: 10px;
 }
+.disable-line{
+    position: absolute;
+    display: none;
+    height: 2px;
+    width: 75px;
+    transform: rotate(-51deg);
+    background-color: red;
+    top: 27px;
+    border-radius: 2px;
+    left: -15px;
+}
+
 .items{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin: 0px -30px;
 }
@@ -154,10 +214,18 @@ header{
 
 
 .item{
+    -ms-flex-preferred-size: 300px;
     flex-basis: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     margin: 30px;
+    -webkit-box-flex: .33;
+    -ms-flex-positive: .33;
     flex-grow: .33;
 }
 
@@ -183,6 +251,7 @@ header{
 .item__photo{
     max-width: 100%;
     display: block;
+    -o-object-fit: cover;
     object-fit: cover;
     margin-bottom: 20px;
 }
@@ -207,6 +276,9 @@ header{
 
 @media screen and (max-width: 500px){
     .header{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
 
@@ -220,6 +292,9 @@ header{
     }
 
     .header__nav-list{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         text-align: center;
     }
@@ -229,7 +304,7 @@ header{
     }
 
     .header__nav-item:not(:first-child){
-        margin-left: 0px;
+        margin-left: 0;
     }
 
     .menu{
