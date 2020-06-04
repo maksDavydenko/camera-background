@@ -12,17 +12,34 @@ menuBtn.addEventListener('click', () => {
         '0' : '180px';
 });
 
-bgBtn.addEventListener('click', ()=>{
+bgBtn.addEventListener('click', () => {
     if(wrapContent.style.backgroundColor !== 'rgb(0, 0, 0)'){
         wrapContent.style.backgroundColor = 'rgba(0, 0, 0, 1)'
-        // bgBtn.textContent = 'On camera'
         disapleLine.style.display = 'block';
     }
     else{
         wrapContent.style.backgroundColor = 'rgba(0, 0, 0, 0)';
-        // bgBtn.textContent = 'Off camera'
         disapleLine.style.display = 'none';
 
     }
 
 })
+
+
+(async () => {
+    video.srcObject = await navigator.mediaDevices.getUserMedia({video: true});
+})();
+
+// us
+(async () => {
+    try {
+        await navigator.mediaDevices.getUserMedia({video: true});
+        console.log("GOT CAM");
+    } catch (e) {
+        console.log("GOT ERROR : " + e);
+        disapleLine.style.display = 'block';
+        wrapContent.style.backgroundColor = 'rgba(0, 0, 0, 1)';
+        disapleLine.disabled = true
+        alert('you camera is disabled :(')
+    }
+})();
