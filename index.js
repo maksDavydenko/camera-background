@@ -6,15 +6,9 @@ const wrapContent = document.querySelector('.wrap-content');
 const bgBtn = document.querySelector('#bgBtn');
 const disapleLine = document.querySelector('.disable-line');
 
-
-// (async () => {
-//     video.srcObject = await navigator.mediaDevices.getUserMedia({video: true});
-// })();
-
-// us
 (async () => {
     try {
-        await navigator.mediaDevices.getUserMedia({video: true});
+        await navigator.mediaDevices.getUserMedia({ video: true });
         console.log("GOT CAM");
     } catch (e) {
         console.log("GOT ERROR : " + e);
@@ -33,13 +27,14 @@ menuBtn.addEventListener('click', () => {
         '0' : '180px';
 });
 
+
 bgBtn.addEventListener('click', () => {
 
-    if(wrapContent.style.backgroundColor !== 'rgb(0, 0, 0)'){
+    if (wrapContent.style.backgroundColor !== 'rgb(0, 0, 0)') {
         wrapContent.style.backgroundColor = 'rgba(0, 0, 0, 1)'
         disapleLine.style.display = 'block';
     }
-    else{
+    else {
         wrapContent.style.backgroundColor = 'rgba(0, 0, 0, 0)';
         disapleLine.style.display = 'none';
 

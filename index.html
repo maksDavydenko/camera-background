@@ -10,6 +10,7 @@
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <link rel="stylesheet" href="../../chrome downloads/Сайт (2)/Сайт/style/style.css">
 </head>
 
 <body>
@@ -34,15 +35,26 @@
                     </nav>
                 </header>
                 <div class="content">
-                    <h2 class="title">Макс, нужно на нашем сайте сделать фон зеркальным, чтобы пользователь заходил и
-                        видел своё
-                        отражение,
-                        тыж программист
+                    <h2 class="title">
+                        Camera background
                     </h2>
-                    <button id="bgBtn">
-                        <img width="35" height="35" src="img/icons8-винтажная-камера-100.png" alt="">
-                        <span class="disable-line"></span>
-                    </button>
+<!--                    Макс, нужно на нашем сайте сделать фон зеркальным, чтобы пользователь заходил и-->
+<!--                    видел своё-->
+<!--                    отражение,-->
+<!--                    тыж программист-->
+
+                    <div class="on-off-camera">
+                        <div class="on-off-camera__wrap">
+                            <button id="bgBtn">
+                                <img width="30" height="30" src="img/icons8-винтажная-камера-100.png" alt="">
+                                <span class="disable-line"></span>
+                            </button>
+                        </div>
+                        <div class="on-off-camera__toggle">
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+
                     <div class="items">
                         <div class="item">
                             <img class="item__photo" src="img/Home_2001.jpg" alt="">
@@ -123,7 +135,7 @@
                 </div>
             </div>
             <footer class="footer">
-                <a class="copirhght" href="https://github.com/maksDavydenko" target="_blank" >Maksym
+                <a class="copirhght" href="https://github.com/maksDavydenko" target="_blank">Maksym
                     Davydenko 2020</a>
             </footer>
         </div>

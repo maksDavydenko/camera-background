@@ -4,9 +4,7 @@
     padding: 0;
     list-style: none;
     text-decoration: none;
-
 }
-
 
 body{
     max-height: 100vh;
@@ -62,9 +60,7 @@ header{
     width: 100%;
 
     display: -webkit-box;
-
     display: -ms-flexbox;
-
     display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
@@ -108,7 +104,6 @@ header{
     transition: .3s ease;
 }
 
-
 .menu{
     position: relative;
     display: none;
@@ -116,7 +111,6 @@ header{
     height: 20px;
     cursor: pointer;
 }
-
 
 .menu__line{
     position: absolute;
@@ -174,29 +168,78 @@ header{
 
 /* content */
 
-#bgBtn{
+.on-off-camera{
     position: fixed;
-    left: 10px;
-    top: 70px;
-    padding: 10px 5px;
-    border: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    top: 50%;
+    transform: translate(0, -70%);
+    transition: .3s;
+    left: -57px;
     display: flex;
-    margin: 0px auto;
-    color: #000;
-    border-radius: 10px;
+    align-items: center;
 }
+
+.on-off-camera__wrap{
+    border: 2px solid #fff;
+    border-left: none;
+    border-radius: 0px 10px 10px 0;
+    padding: 35px 5px;
+}
+
+.on-off-camera__toggle{
+    width: 20px;
+    padding: 30px 4px;
+    border: 2px solid #fff;
+    border-radius: 0px 10px 10px 0;
+    border-left: none;
+
+}
+.on-off-camera:hover{
+    left: 0;
+}
+#bgBtn{
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    position: relative;
+}
+
 .disable-line{
+    top: 50%;
     position: absolute;
     display: none;
     height: 2px;
-    width: 75px;
-    transform: rotate(-51deg);
+    left: 0;
     background-color: red;
-    top: 27px;
+    width: 45px;
+    transform: rotate(-45deg);
+}
+
+.arrow{
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
+.arrow::before{
+    content: "";
+    top: 2px;
+    transform: rotate(55deg);
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
     border-radius: 2px;
-    left: -15px;
+}
+
+.arrow::after{
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    transform: rotate(-55deg);
+    width: 20px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #fff;
 }
 
 .items{
@@ -210,8 +253,6 @@ header{
     flex-wrap: wrap;
     margin: 0px -30px;
 }
-
-
 
 .item{
     -ms-flex-preferred-size: 300px;
